@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1">
+
+    <tr>
+        <th>first Name</th>
+        <th>last Name</th>
+        <th>midle Name</th>
+        <th>rate1 </th>
+        <th>rate2 </th>
+        <th>rate3 </th>
+        <th>rate4 </th>
+        <th>rate5 </th>
+        <th>rate_orta </th>
+        <th>grup_name </th>
+        <th>birth_date</th>
+        <th>enter_date</th>
+        <th>course</th>
+        <th>faculty</th>
+        <th>citizenship</th>
+
+
+    </tr>
+    {% for st in students %}
+    <tr>
+        <td>
+            {{ st.first_name }}
+        </td>
+        <td>
+            {{ st.last_name }}
+        </td>
+        <td>
+            {{ st.midle_name }}
+        </td>
+        <td>
+            {{ st.rate1 }}
+        </td>
+        <td>
+            {{ st.rate2 }}
+        </td>
+        <td>
+            {{ st.rate3 }}
+        </td>
+        <td>
+            {{ st.rate4 }}
+        </td>
+        <td>
+            {{ st.rate5 }}
+        </td>
+        <td>
+            {{ st.rate_orta }}
+        </td>
+        <td>
+            {{ st.grup_name }}
+        </td>
+        <td>
+            {{ st.birth_date }}
+        </td>
+        <td>
+            {{ st.enter_date }}
+        </td>
+        <td>
+            {{ st.course }}
+        </td>
+        <td>
+            {{ st.faculty }}
+        </td>
+        <td>
+            {{ st.citizenship }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="width: 1000px;
+    margin: 0 auto;
+    padding: 20px;">
+
+    <div class="content">
+
+        <div class="top" style="font-size: 20px;    text-align: center;     height: 200px;">
+
+            <a href="/" style="padding-right: 20px; text-decoration: none"> Main </a>
+            <a href="/bookes" style="padding-right: 20px; text-decoration: none"> Books </a>
+            <a href="/countrys" style="padding-right: 20px; text-decoration: none"> Country </a>
+            <a href="/contact" style="padding-right: 20px; text-decoration: none"> Contact </a>
+
+            {% block top %}
+
+            {% endblock %}
+        </div>
+        <div class="main">
+            {% block main %}
+                MAIN
+            {% endblock %}
+
+        </div>
+    </div>
+
+</body>
+</html>

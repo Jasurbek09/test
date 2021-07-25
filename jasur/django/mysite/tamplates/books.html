@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block main %}
+    <body>
+    <h1>salom hammaga</h1>
+    <ul>
+        {% for Book in books %}
+        <li>
+            {{ Book.title }}, {{ Book.count }}, {{ Book.genre }}
+        </li>
+        {% endfor %}
+    </ul>
+    <table border="2">
+        {% for book in books %}
+        <tr>
+            <td>{{ book.id }} </td>
+            <td><a href="/books/{{ book.id }}">{{ book.title }} </a> </td>
+            <td>{{ book.description }} </td>
+            <td>{{ book.count }} </td>
+            <td>{{ book.genre }} </td>
+            <td>{{ book.pub_date }} </td>
+            <td>{{ book.author_id }} </td>
+        </tr>
+         {% endfor %}
+    </table>
+
+
+    <br>
+
+    <table border="2">
+        {% for country in countrys %}
+        <tr>
+            <td> {{ forloop.counter }} </td>
+            <td> {{country.id}}</td>
+            <td>{{country.name}}</td>
+            <td>{{country.desk}}</td>
+            <td>{{country.capital}}</td>
+            <td>{{country.square}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <br>
+
+    <table border="2">
+        {% for author in authors %}
+        <tr>
+            <td>{{author.id}}</td>
+            <td><p>last_name</p>{{author.last_name}}</td>
+            <td><p>first_name</p>{{author.first_name}}</td>
+            <td><p>middle_name</p>{{author.middle_name}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+{% endblock %}

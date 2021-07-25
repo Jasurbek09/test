@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block main %}
+    <body>
+    About countries
+    <table border="2">
+
+        <tr>
+
+            <td>{{country.id}}</td>
+            <td>{{country.name}}</td>
+            <td>{{country.desk}}</td>
+            <td>{{country.capital}}</td>
+            <td>{{country.square}}</td>
+            <td><a href="/countryes/{{ country.id }}"> {{ forloop.counter }}</a> </td>
+
+        </tr>
+
+    </table>
+{% endblock %}

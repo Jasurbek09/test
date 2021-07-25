@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block main %}
+    <body>
+    <h1 style="font-weight: bold"> Countryyyyy stranisa</h1>
+    <table border="2">
+        {% for country in countrys %}
+        <tr>
+
+            <td>{{country.id}}</td>
+            <td>{{country.name}}</td>
+            <td>{{country.desk}}</td>
+            <td>{{country.capital}}</td>
+            <td>{{country.square}}</td>
+            <td><a href="/countryes/{{ country.id }}"> {{ forloop.counter }}</a> </td>
+            <td>
+                {{ country.logo }}
+                <img src="/media/{{ country.log}}" alt="">
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

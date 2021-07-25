@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 style="font-weight: bold"> Author stranisa</h1>
+<table border="2">
+    {% for Author in authors %}
+    <tr>
+        <td>{{Author.id}}</td>
+        <td><p>last_name</p>{{Author.last_name}}</td>
+        <td><p>first_name</p>{{Author.first_name}}</td>
+        <td><p>middle_name</p>{{Author.middle_name}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

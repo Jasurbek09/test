@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block container %}
+			<!-- start banner Area -->
+			<section class="about-banner">
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Pricing Plan				
+							</h1>	
+							<p class="text-white link-nav"><a href="index">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="price"> Pricing Plan</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+{% include 'plan_kalonka.html' %}
+
+			<!-- Start faq Area -->
+			<section class="faq-area pb-120">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">{{ other_item.Frequently_Asked_Questions }}</h1>
+								<p>{{ other_item.Frequently_Asked_Questions_desc }}</p>
+							</div>
+						</div>
+					</div>						
+					<div class="row justify-content-center">
+						<div class="col-lg-8">
+						<dl class="accordion">
+                            {% for faq in faqs %}
+							<dt>
+								<a href="">{{ faq.question}}</a>
+							</dt>
+							<dd>
+							{{ faq.response }}
+							</dd>
+                            {% endfor %}
+
+						</dl>
+       
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End faq Area -->
+{% endblock %}

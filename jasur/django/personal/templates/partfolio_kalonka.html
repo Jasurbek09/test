@@ -1,0 +1,52 @@
+
+
+<!-- Start portfolio-area Area -->
+            <section class="portfolio-area section-gap" id="portfolio">
+                <div class="container">
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content pb-70 col-lg-8">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">{{ other_item.Our_Latest_Featured_Projects }}</h1>
+		                        <p>{{ other_item.Our_Latest_Featured_Projects_desc }}</p>
+		                    </div>
+		                </div>
+		            </div>
+
+                    <div class="filters">
+                        <ul>
+                            <li class="active" data-filter="*">All</li>
+                            {% for type in projects_types  %}
+                            <li data-filter=".{{type.title}}">{{ type.title }}</li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                    <div class="filters-content">
+                        <div class="row grid">
+                            {% for port in projects %}
+                            <div class="single-portfolio col-sm-4 all {{ port.projecttype.title }}">
+                            	<div class="relative">
+	                            	<div class="thumb">
+	                            		<div class="overlay overlay-bg"></div>
+	                            		 <img class="image img-fluid" src=/media/{{ port.logo }} alt="">
+	                            	</div>
+									<a href="img/p1.jpg" class="img-pop-up">
+									  <div class="middle">
+									    <div class="text align-self-center d-flex"><img src="/media/img/preview.png" alt=""></div>
+									  </div>
+								</a>
+                            	</div>
+								<div class="p-inner">
+								    <h4>{{ port.title}}</h4>
+									<div class="cat">{{ port.projecttype.title }}</div>
+								</div>
+                            </div>
+
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End portfolio-area Area -->

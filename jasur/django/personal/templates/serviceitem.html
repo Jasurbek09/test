@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block container %}
+    <div class="single-services">
+        <p><img src="/media/{{ servis.logo }}" alt=""></p>
+        <a href="#"><h4>{{ servis.title }}</h4></a>
+        <p>
+            {{ serv.description}}
+        </p>
+    </div>
+{% endblock %}

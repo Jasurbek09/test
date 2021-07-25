@@ -1,0 +1,33 @@
+<!-- Start testimonial Area -->
+		    <section class="testimonial-area section-gap">
+		        <div class="container">
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content pb-70 col-lg-8">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">{{ other_item.Clients_Feedback_About_Me}}</h1>
+		                        <p>{{ other_item.Clients_Feedback_About_Me_desc}}</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="active-testimonial">
+                            {% for com in coments %}
+		                    <div class="single-testimonial item d-flex flex-row">
+		                        <div class="thumb">
+		                            <img class="img-fluid" src="/media/{{ com.author_logo }}" alt="">
+		                        </div>
+		                        <div class="desc">
+		                            <p>
+                                        {{com.text}}
+		                            </p>
+		                            <h4>{{com.name_author}}</h4>
+		                            <p>{{com.info_author}}</p>
+                                    <a href="{{ com.link_author}}"></a>
+		                        </div>
+		                    </div>
+		                   {% endfor %}
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+		    <!-- End testimonial Area -->

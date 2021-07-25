@@ -1,0 +1,38 @@
+
+
+    <section class="price-area section-gap">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">{{ other_item.choose_your_plan }}</h1>
+								<p>{{ other_item.choose_your_plan_desc }}</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+                        {% for plan in plans %}
+                        <div class="col-lg-3 col-md-6 single-price">
+                            <div class="top-part">
+                                <h1 class="package-no">0{{ forloop.counter }}</h1>
+                                <h4>{{ plan.title }}</h4>
+                                <p class="mt-10">{{ plan.title_info }}</p>
+                            </div>
+                            <div class="package-list">
+                                <ul>
+                                    <li>{{ plan.info1 }}</li>
+                                    <li>{{ plan.info2 }}</li>
+                                    <li>{{ plan.info3 }}</li>
+                                    <li>{{ plan.info4 }}</li>
+                                </ul>
+                            </div>
+                            <div class="bottom-part">
+                                <h1>${{plan.price}}</h1>
+                                <a class="price-btn text-uppercase" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+					</div>
+				</div>
+			</section>
+

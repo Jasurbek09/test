@@ -1,0 +1,15 @@
+ <section class="brands-area">
+		        <div class="container">
+		            <div class="brand-wrap">
+		                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
+		                    {% for area in partners %}
+                            <div class="col single-brand">
+
+		                        <a href="{{ area.link }}"><img class="mx-auto" src="/media/{{ area.logo}}" alt=""></a>
+
+		                    </div>
+                            {% endfor %}
+                        </div>
+		            </div>
+		        </div>
+		    </section>
